@@ -1,0 +1,220 @@
+\documentclass{article}
+\usepackage{hyperref}
+
+\author{
+Jeff Levy\\
+levyjeff@uchicago.edu\\
+Keller 3101
+}
+
+\title{PPHA 30536: Data and Programming for Public Policy II}
+\date{Fall Quarter, 2020}
+\begin{document}
+
+\maketitle
+%\begin{abstract}
+%abs
+%\end{abstract}
+
+\section*{Course Information}
+Section 1 in-person: Tuesday 11:20 AM - 12:40 PM, Keller TBD or Zoom \\
+Section 1 virtual: Wednesday 10:50 AM - 12:10 PM, Zoom only \\ 
+ \\
+Section 2 in-person: Tuesday 2:40 PM - 4:00 PM, Keller TBD or Zoom \\
+Section 2 virtual: Wednesday 10:50 AM - 12:10 PM, Zoom only \\
+ \\
+Labs: TBD, Zoom only \\
+ \\
+September 29th - December 12th, 2020
+
+\section*{Office Hours}
+Please email me to schedule meetings over Zoom.
+
+\section*{Teaching Assistants}
+Stephanie Gomez - stephanieramos@uchicago.edu \\
+Angelo Cuzzubo - acozzubo@uchicago.edu \\
+TBD
+
+\section*{Prerequisites}
+The course PPHA 30535, Data and Programming for Public Policy I, is required to take this course.  If you did not take PPHA 30535, or took PPHA 30535 sections 1 or 2 (taught in R), you must email me for approval, and will be required to demonstrate proficiency with Python and Pandas.
+
+Note that Data and Programming for Public Policy II in the R language will be offered Winter quarter 2020.
+
+\section*{Course Objectives}
+This course will build directly on the material covered in PPHA 30535.  We will assume a grasp of the Python skills from the previous class at the start, so that we can focus on practical applications to research.  Whereas the goal of the first class was introduce Python as a tool for data analysis, and to prepare students for internship-level policy research positions, the goals of this course will be to:
+
+\begin{enumerate}
+	\item Go from simply applying Python to solve research questions, to applying Python professionally, in a way that supports code maintenance, collaboration, efficiency, and readability
+	\item Deepen existing skills; for example, we will go from learning to create plots to discussing the principles of creating good plots
+	\item Broaden into new skills that require a higher level of Python proficiency 
+	\item Prepare for the post-graduation job market
+\end{enumerate}
+
+\noindent Additionally, we will have guest speakers throughout the quarter depending on their schedules.  Confirmed so far:
+
+\begin{itemize}
+	\item \textbf{Urban Institute} - Jessica Kelly - Director, Research Programming
+	\item \textbf{UChicago Crime Lab} - Emma Nechamkin - Data Scientist
+	\item \textbf{UChicago Biological Sciences Division} - Mark Nardone - Chief Information Security Officer 
+\end{itemize}
+
+\noindent Speakers are subject to change, and will require a flexible course schedule on a week-by-week basis.
+
+%\newpage
+
+\section*{Software and Resources}
+\emph{The software and resources for this class are identical to the Python sections of PPHA 30535 in the spring.}
+
+There are no required text books for this class.  Python is extremely well supported online.  I expect students will primarily be using the \href{https://docs.python.org/3/}{official Python documentation} and \href{https://stackoverflow.com/}{StackOverflow}, which will be discussed in class.  
+
+For the data sections, however, I suggest purchasing the text \href{https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662/ref=sr_1_3?ie=UTF8\&qid=1550574627\&sr=8-3\&keywords=python+for+data+analysis+2nd}{Python for Data Analysis 2nd Edition} by Wes Mckinney, which is available online or in the school bookstore.  Not only is it very useful both as a quick reference and when read comprehensively as a guide, it is also written by the author of Pandas, the package used for data analysis in Python.  The package is free and open-source, so this is also a good way of giving back to the creator.  If you purchase this it is very important you get the 2nd edition, as the original is outdated.
+
+There are two pieces of software that are required for this class, and two that I suggest, all of which are free.  Required:
+\begin{itemize}
+	\item \emph{Please have ready on day one} the \href{https://www.anaconda.com/distribution/}{Anaconda Python Distribution} installed already.  Please select version 3.7, though 3.6 will also work  if you installed it previously.  No version of Python 2.x is acceptable.
+	\item \emph{Please have ready on day one} the \href{https://desktop.github.com/}{GitHub Desktop} installed.  You may also use the Git command line interface if you have it installed from before and know how to use it, though it also comes as part of the Desktop download.
+\end{itemize}
+
+Suggested:
+\begin{itemize}
+	\item The \href{https://atom.io/}{Atom} open-source text editor. I suggest Atom, but perfectly viable alternatives include \href{https://www.sublimetext.com/}{Sublime}, \href{https://www.vim.org/}{Vim}, and many others.  You may also chose to use one of the IDEs (integrated development environments) that comes with Anaconda, such as Spyder.
+	\item The \href{https://notepad-plus-plus.org/}{Notepad++} text editor.  This is strictly optional, but I find this lightweight text editor useful for viewing raw data alongside my code when necessary.  You can choose it (or others like it) as your text editor for coding, as well.
+\end{itemize}
+
+Note that overall, the software environment you choose for developing code is entirely personal preference.  You simply must have some distribution of the programming language you will work in, some place to write your code, and some place to run your code.
+	
+\section*{Attendance}
+\textbf{You do not have to be on campus to take this class.}  All in-person content is optional, and will be streamed over Zoom, with recordings available on Canvas.
+
+\textbf{Attendance to a minimum of one lab per week is mandatory, and graded.}  There are four time slots for labs, and anyone from either section can attend any of the four.  You may also, of course, attend more than one if you choose.  Labs in week 1 will be strictly optional and ungraded, and will be intended for setting up software or asking specific questions about projects from last quarter.
+
+There is no attendance policy for lecture, and you don't need to give me excuses not to attend.  However, you will be fully responsible for the material covered in class, and while code from class may be posted, it will rarely if ever come with the explanations provided in class.
+
+If you experience issues with attending class or completing work due to child care, please speak with me directly so we can find an accommodation.
+
+\section*{Academic Integrity}
+\textbf{All code you turn in must be your own.}  Do not share your code with your classmates, or ask others for theirs.  That said, the practice of writing code is very often a collaborative one.  To avoid academic dishonesty, and a potential failing grade, please follow these guidelines:
+
+\begin{enumerate}
+	\item You MAY \textbf{search for help online} (e.g. StackOverflow)
+	\begin{itemize}
+		\item You must always cite the source by leaving a link to it in the comments of your code
+		\item You MAY NOT copy verbatim - find inspiration and then rewrite it
+		\item You MAY NOT take solutions to problem sets from online
+	\end{itemize}
+	\item You MAY \textbf{work with your classmates}
+	\begin{itemize}
+		\item You must always cite the individuals you collaborate directly with by including their names in the comments at the top of your program
+		\item You MAY NOT share or look at each other's code
+		\item You MAY share output (e.g. plots or error messages)
+		\item You MAY discuss concepts and theory (e.g. using a whiteboard)
+	\end{itemize}
+	\item You MAY participate in \textbf{discussions on Piazza}
+	\begin{itemize}
+		\item You MAY share generic or pseudo code, and ideas
+		\item You MAY NOT share specific code from your own work
+	\end{itemize}
+	\item When explicitly allowed, you MAY \textbf{work in groups}
+	\begin{itemize}
+		\item If groups are optional, you must declare your group the day the assignment is given
+		\item You will collaborate, share code, and submit only one assignment
+	\end{itemize}
+\end{enumerate}
+
+It is very important that you use proper citations.  If you turn in an assignment that the grader deems to be too unoriginal (e.g. your solutions too closely follow a solution found online, or another classmates), but you have citied all the sources, then you may be allowed a chance to redo your work.  If the same thing happens but you have not cited the sources, you will receive a failing grade and possibly be subject to other sanctions under the university's \href{https://college.uchicago.edu/advising/academic-integrity-student-conduct}{Academic Integrity} guide.
+
+The above rules apply to interactions with your classmates and the internet. You may present your code and questions to the professor or the TAs at any time.
+
+\section*{Homework, Exams, and Grading}
+There are no exams for this class.  Your grade will consist of weekly assignments, lab attendance, and a project.  Assignments will generally be due within a week of assignment, over GitHub Classrooms.  Late work is not accepted without prior approval or with a documented emergency.
+
+\textbf{Your grade will be calculated as 60\% weekly assignments, 30\% final project, and 10\% weekly lab attendance.}  A minimum of 60\% is required to pass this course.  Among those who pass, final grades will use the following curve: 1/3 A, 1/4 A-, 1/4 B+, 1/12 B, 1/12 B-.
+
+\section*{Course Outline}
+
+TBD
+%
+%\textit{The specifics of each week will remain fluid in order to accommodate the guest speakers, but will be discussed in advance.}\\
+%\smallskip
+%
+%\noindent
+%\textbf{\underline{Week 1}}
+%\begin{itemize}
+%\item September 29th - Introduction, project discussion
+%\item September 30th - Code generalization and organization
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 2}}
+%\begin{itemize}
+%\item October 6th - Dealing with irregularly shaped data 1
+%\item October 7th - Dealing with irregularly shaped data 2
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 3}}
+%\begin{itemize}
+%\item October 13th - 
+%\item October 14th - Common data issues
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 4}}
+%\begin{itemize}
+%\item October 20nd - \textbf{Urban Institute speaker}
+%\item October 21th - Parsing data from PDF documents
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 5}}
+%\begin{itemize}
+%\item October 27th - Natural Language Processing
+%\item October 28st - Natural Language Processing
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 6}}
+%\begin{itemize}
+%\item November 3rd - Emma Nechamkin and Alex Williamson, \textbf{UChicago Crime Lab}
+%\item November 4th - Julie Dworkin, \textbf{Chicago Coalition for the Homeless}
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 7}}
+%\begin{itemize}
+%\item November 10th - Principles of good plotting
+%\item November 11th - Interactive plotting
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 8}}
+%\begin{itemize}
+%\item November 17th - \textbf{Civis Analytics speaker}
+%\item November 18st - Working with data from Civis
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 9}}
+%\begin{itemize}
+%\item November 24th - David Bak, \textbf{General Dynamics Land Systems / RAND Corporation / Department of Defense}
+%\item November 25th - No class - Thanksgiving break
+%\end{itemize}
+%\bigskip
+%
+%\noindent
+%\textbf{\underline{Week 10}}
+%\begin{itemize}
+%\item December 1st - Introduction to spatial data in Python
+%\item December 2nd - Code samples and presentation
+%\end{itemize}
+%\bigskip
+%
+\end{document}
